@@ -21,3 +21,8 @@ class Building(models.Model):
     def get_eui(self, year):
         total_energy = self.get_annual_energy_kwh(year)
         return round(total_energy / self.area_m2, 2) if self.area_m2 else 0
+
+    @property
+    def records(self):
+        from simplebuildingmanager.records.models import BaseRecord
+        return BaseRecord.objects.filter(building=self)
