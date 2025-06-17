@@ -1,0 +1,23 @@
+{
+  "name": "simplebuildingmanager-static",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "sass --style=compressed --quiet-deps --load-path=node_modules --load-path=simplebuildingmanager/static/src/scss simplebuildingmanager/static/src/scss/project.scss simplebuildingmanager/static/css/project.css",
+    "build:js": "esbuild simplebuildingmanager/static/src/ts/project.ts --bundle --minify --sourcemap --outdir=simplebuildingmanager/static/js",
+    "watch": "npm run watch:css & npm run watch:js",
+    "watch:css": "sass --watch --quiet-deps --load-path=node_modules simplebuildingmanager/static/src/scss/project.scss:simplebuildingmanager/static/css/project.css",
+    "watch:js": "esbuild simplebuildingmanager/static/src/ts/project.ts --bundle --sourcemap --outdir=simplebuildingmanager/static/js --watch"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.3",
+    "sass": "latest"
+  },
+  "dependencies": {
+    "@tabler/core": "^1.2.0",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "htmx.org": "^1.9.12"
+  }
+}

@@ -6,7 +6,7 @@ python_files = ["tests.py", "test_*.py"]
 
 # ==== Coverage ====
 [tool.coverage.run]
-include = ["purelms/**"]
+include = ["simplebuildingmanager/**"]
 omit = ["*/migrations/*", "*/tests/*"]
 plugins = ["django_coverage_plugin"]
 

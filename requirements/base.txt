@@ -23,3 +23,6 @@ djangorestframework==3.16.0  # https://github.com/encode/django-rest-framework
 django-cors-headers==4.7.0  # https://github.com/adamchainz/django-cors-headers
 # DRF-spectacular for api documentation
 drf-spectacular==0.28.0  # https://github.com/tfranzel/drf-spectacular
+# Managing polymorphic models
+git+https://github.com/jazzband/django-polymorphic.git@master#egg=django-polymorphic
+pydantic==2.11.4
